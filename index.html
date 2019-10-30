@@ -3,17 +3,33 @@
 <head>
 <meta charset="utf-8">
 <title>Untitled Document</title>
-<script type="text/javascript" src="dangnhap.js"></script>
-<link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
-
+	
 <body>
-	<form id="login" class="box" action="index.html" method="post">
-		<h1>Login</h1>
-		<input id="username" type="text" name="" placeholder="Username" />
-		<input id="password" type="password" name="" placeholder="Password"/>
-		<input type="submit" name="" value="Login" onClick="onLoginSubmit()"/>
-		<a href="../dangky1/index.html"><input type="button" name="" value="Register"/></a>
+	<script language="javascript">
+		var tendangnhap, pass;
+		
+		
+		function DangNhap(){
+			tendangnhap = document.forms["dangnhap"]["tendangnhap"].value;
+			alert(tendangnhap);
+		}
+	</script>
+	<form name="dangnhap">
+		<table>
+			<tr>
+				<td>Ten dang nhap: </td>
+				<td><input name="tendangnhap" type="text" /></td>
+			</tr>
+			<tr>
+				<td>Mat khau: </td>
+				<td><input type="password" name="pass" /></td>
+			</tr>
+			<tr>
+				<td><input type="button" name="dangnhap" value="Đăng Nhập" onClick="DangNhap();" /></td>
+				<td><input type="reset" name="xoa" value="Xóa" /></td>
+			</tr>
+		</table>
 	</form>
 </body>
 </html>
